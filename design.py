@@ -535,7 +535,7 @@ def get_config(substr):
         if len(re.findall(substr, section)):
             adding = config._sections[section].copy()
             adding.update({'section': section})
-            adding.move_to_end('section', last=False)
+            # adding.move_to_end('section', last=False)
             ans.append(adding)
             pipes.add(section.split("_")[1])
     return ans, pipes
